@@ -12,6 +12,11 @@
 		6AB09CFF2949DCCA00885FE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AB09CFE2949DCCA00885FE7 /* Assets.xcassets */; };
 		6AB09D022949DCCA00885FE7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AB09D012949DCCA00885FE7 /* Preview Assets.xcassets */; };
 		6AB09D0A2949DEDF00885FE7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6AB09D092949DEDF00885FE7 /* README.md */; };
+		6AB09D0F2949DFD000885FE7 /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB09D0E2949DFD000885FE7 /* FirstView.swift */; };
+		6AB09D112949E14000885FE7 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB09D102949E14000885FE7 /* SecondView.swift */; };
+		6AB09D132949E3C800885FE7 /* SecondDestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB09D122949E3C800885FE7 /* SecondDestinationView.swift */; };
+		6AB09D152949EB5300885FE7 /* ThirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB09D142949EB5300885FE7 /* ThirdView.swift */; };
+		6AB09D172949EBDD00885FE7 /* RepresetableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB09D162949EBDD00885FE7 /* RepresetableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +26,11 @@
 		6AB09CFE2949DCCA00885FE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6AB09D012949DCCA00885FE7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6AB09D092949DEDF00885FE7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		6AB09D0E2949DFD000885FE7 /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
+		6AB09D102949E14000885FE7 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
+		6AB09D122949E3C800885FE7 /* SecondDestinationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondDestinationView.swift; sourceTree = "<group>"; };
+		6AB09D142949EB5300885FE7 /* ThirdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdView.swift; sourceTree = "<group>"; };
+		6AB09D162949EBDD00885FE7 /* RepresetableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepresetableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				6AB09CFA2949DCC900885FE7 /* firstLessonApp.swift */,
-				6AB09CFC2949DCC900885FE7 /* MainView.swift */,
+				6AB09D0D2949DFA100885FE7 /* App */,
 				6AB09CFE2949DCCA00885FE7 /* Assets.xcassets */,
 				6AB09D002949DCCA00885FE7 /* Preview Content */,
 				6AB09D092949DEDF00885FE7 /* README.md */,
@@ -68,6 +78,19 @@
 				6AB09D012949DCCA00885FE7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6AB09D0D2949DFA100885FE7 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				6AB09CFC2949DCC900885FE7 /* MainView.swift */,
+				6AB09D0E2949DFD000885FE7 /* FirstView.swift */,
+				6AB09D102949E14000885FE7 /* SecondView.swift */,
+				6AB09D122949E3C800885FE7 /* SecondDestinationView.swift */,
+				6AB09D142949EB5300885FE7 /* ThirdView.swift */,
+				6AB09D162949EBDD00885FE7 /* RepresetableView.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,7 +164,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AB09D132949E3C800885FE7 /* SecondDestinationView.swift in Sources */,
 				6AB09CFD2949DCC900885FE7 /* MainView.swift in Sources */,
+				6AB09D172949EBDD00885FE7 /* RepresetableView.swift in Sources */,
+				6AB09D0F2949DFD000885FE7 /* FirstView.swift in Sources */,
+				6AB09D112949E14000885FE7 /* SecondView.swift in Sources */,
+				6AB09D152949EB5300885FE7 /* ThirdView.swift in Sources */,
 				6AB09CFB2949DCC900885FE7 /* firstLessonApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  ThirdView.swift
 //  firstLesson
 //
 //  Created by Dmitriy Verennik on 14.12.2022.
@@ -7,14 +7,17 @@
 
 import SwiftUI
 
-struct MainView: View {
+struct ThirdView: View {
+
     var body: some View {
-        EmptyView()
+        Button("Open Modally") {
+
+        }
     }
 }
 
-struct MainView_Previews: PreviewProvider {
+struct ThirdView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        ThirdView()
     }
 }

@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/dima2394/SwiftUINavigation",
       "state" : {
-        "revision" : "1c8b39004223965cbf694dc48cff838825fc654e",
-        "version" : "1.0.0"
+        "revision" : "c6feb9870f9e3e3301388bd71b3aac49d6b4e99d",
+        "version" : "1.0.1"
       }
     }
   ],

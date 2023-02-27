@@ -9,6 +9,7 @@ import SwiftUI
 import Network
 import SwiftUINavigation
 import SafariServices
+import Core
 
 struct NewsDetailView: View {
 

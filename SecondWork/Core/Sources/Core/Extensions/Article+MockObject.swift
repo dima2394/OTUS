@@ -9,7 +9,7 @@ import Network
 
 extension Article {
 
-    static var mockObject: Article {
+    public static var mockObject: Article {
         .init(source: Source(id: "wired", name: "wired"),
               author: "Joel Khalili",
               title: "Bitcoin Miners Are Playing a High-Stakes Game of Chicken",

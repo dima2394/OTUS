@@ -7,9 +7,20 @@
 
 import SwiftUI
 import SwiftUINavigation
+import Core
 
 @main
 struct MainApp: App {
+
+    init() {
+        registerServices()
+    }
+
+    private func registerServices() {
+        let networkService: NetworkServiceProtocol = NetworkService()
+        ServiceLocator.shared.add(networkService)
+    }
+
     var body: some Scene {
         WindowGroup {
             NavigationViewController(transition: .custom(push: .opacity.combined(with: .push(from: .trailing)),

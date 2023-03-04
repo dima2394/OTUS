@@ -17,7 +17,7 @@ public final class NetworkService: NetworkServiceProtocol {
                              page: Int,
                              pageSize: Int,
                              language: String?,
-                             completion: ((Result<NewsList, Error>) -> Void)?) {
+                             completion: @escaping (Result<NewsList, Error>) -> Void) {
         FetchNewsAPI.getAllNews(q: query,
                                 apiKey: apiKey,
                                 page: page,
@@ -25,13 +25,13 @@ public final class NetworkService: NetworkServiceProtocol {
                                 language: language,
                                 apiResponseQueue: .main) { newsList, error in
             if let error {
-                completion?(.failure(error))
+                completion(.failure(error))
                 return
             }
             guard let newsList else {
                 return
             }
-            completion?(.success(newsList))
+            completion(.success(newsList))
         }
     }
 }

@@ -10,52 +10,25 @@ import SwiftUINavigation
 import Core
 import Network
 
-enum NewsCategory: String, CaseIterable {
-    case bitcoin
-    case tech
-    case auto
-}
-
-final class NewsListState {
-
-    @Injected var networkService: NetworkServiceProtocol?
-
-    var currentPage = 0
-
-    @Published
-    var articles: [Article] = []
-
-    var isLoading = false
-
-    @Published
-    var selectedCategory: String = NewsCategory.bitcoin.rawValue
-}
-
 struct NewsListEnvironment {
     @Injected var networkService: NetworkServiceProtocol?
 }
 
 struct NewsListView: View {
 
+    enum Action {
+        case resetData
+        case update(articles: [Article])
+        case fetchWithCompletion(completion: ([Article]) -> Void)
+    }
+
     @EnvironmentObject
     private var navigationModel: NavigationViewModel
-
-    @State
-    private var selectedCategory: String = NewsCategory.bitcoin.rawValue
-
-    @StateObject
-    private var viewModel = NewsListViewModel()
 
     private var environment = NewsListEnvironment()
 
     private var pickerValues: [String] {
         NewsCategory.allCases.compactMap{$0.rawValue}
-    }
-
-    enum Action {
-        case resetData
-        case update(articles: [Article])
-        case fetchWithCompletion(completion: ([Article]) -> Void)
     }
 
     @ObservedObject
@@ -76,7 +49,6 @@ struct NewsListView: View {
                 }
                 switch result {
                 case .success(let newsList):
-                    oldState.articles = newsList.articles ?? []
                     completion(newsList.articles ?? [])
                 case .failure(let error):
                     debugPrint("❌ \(#function) \(error.localizedDescription)")
@@ -114,7 +86,7 @@ struct NewsListView: View {
                 NewsListCell(article: item.wrappedValue)
                     .onAppear {
                         if isLast {
-                            viewModel.fetchNews(query: selectedCategory.stringValue, language: "en")
+                            store.dispatch(action: fetchCompletionAction, environment: environment)
                         }
                     }
                     .onTapGesture {

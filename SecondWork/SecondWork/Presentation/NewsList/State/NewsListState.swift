@@ -17,8 +17,6 @@ enum NewsCategory: String, CaseIterable {
 
 final class NewsListState {
 
-    @Injected var networkService: NetworkServiceProtocol?
-
     var currentPage = 0
 
     @Published

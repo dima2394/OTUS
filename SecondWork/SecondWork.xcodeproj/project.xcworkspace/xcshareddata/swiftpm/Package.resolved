@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "swiftuinavigation",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/dima2394/SwiftUINavigation",
+      "state" : {
+        "revision" : "c6feb9870f9e3e3301388bd71b3aac49d6b4e99d",
+        "version" : "1.0.1"
+      }
+    }
+  ],
+  "version" : 2
+}

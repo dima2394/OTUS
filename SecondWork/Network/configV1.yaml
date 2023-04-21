@@ -1,0 +1,112 @@
+openapi: 3.0.0
+info:
+    title: News API
+    description: Everything News API
+    version: 1.0.0
+servers:
+- url: https://newsapi.org/v2
+  description: Main server with second version
+tags:
+- name: fetchNews
+  description: All news fetcher
+paths:
+  /everything:
+    get:
+      tags:
+      - fetchNews
+      summary: get all new
+      description: Get All News
+      operationId: getAllNews
+      parameters:
+      - name: q
+        in: query
+        required: true
+        explode: true
+        schema:
+          type: string
+      - name: apiKey
+        in: query
+        required: true
+        schema:
+          type: string
+          default: "8160581966824d818db22e92f800c6ee"
+      - name: page
+        in: query
+        required: true
+        schema:
+          type: integer
+      - name: pageSize
+        in: query
+        required: true
+        schema:
+          type: integer
+          default: 20
+      - name: language
+        in: query
+        required: false
+        schema:
+          type: string
+          default: "en"
+      responses:
+        "200":
+          description: good
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NewsList'
+        "400":
+          description: bad input parameter
+components:
+  schemas:
+    NewsList:
+      type: object
+      properties:
+        status:
+          type: string
+        totalResults:
+          type: integer
+        articles:
+           type: array
+           items:
+            $ref: '#/components/schemas/Article'
+    Source:
+      type: object
+      required:
+        - id
+        - name
+      properties:
+        id:
+         type: string
+         nullable: true
+        name:
+          type: string
+    Article:
+      type: object
+      required:
+        - source
+        - author
+        - title
+        - description
+        - url
+        - urlToImage
+        - publishedAt
+        - content
+      properties:
+        source:
+          $ref: '#/components/schemas/Source'
+        author:
+          type: string
+          nullable: true
+        title:
+          type: string
+        description:
+          type: string
+        url:
+          type: string
+        urlToImage:
+          type: string
+          nullable: true
+        publishedAt:
+          type: string
+        content:
+          type: string

@@ -15,5 +15,5 @@ public protocol NetworkServiceProtocol {
                       page: Int,
                       pageSize: Int,
                       language: String?,
-                      completion: ((Result<NewsList, Error>) -> Void)?)
+                      completion: @escaping (Result<NewsList, Error>) -> Void)
 }

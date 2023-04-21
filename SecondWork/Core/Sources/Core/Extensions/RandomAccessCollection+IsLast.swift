@@ -7,10 +7,9 @@
 
 import Foundation
 
-
 extension RandomAccessCollection where Self.Element: Identifiable {
 
-    func isLast<Item: Identifiable>(_ element: Item) -> Bool {
+    public func isLast<Item: Identifiable>(_ element: Item) -> Bool {
         guard !isEmpty,
               let itemIndex = firstIndex(where: { AnyHashable($0.id) == AnyHashable(element.id) })
         else {

@@ -7,8 +7,7 @@
 
 import Foundation
 
-
-extension String {
+public extension String {
 
     private static var dateFormatterGetter: DateFormatter {
         let dateFormatter = DateFormatter()

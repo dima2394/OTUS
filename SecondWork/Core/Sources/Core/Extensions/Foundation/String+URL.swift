@@ -7,14 +7,14 @@
 
 import Foundation
 
-extension String {
+public extension String {
 
     var url: URL? {
         URL(string: self)
     }
 }
 
-extension Optional where Wrapped == String {
+public extension Optional where Wrapped == String {
 
     var url: URL? {
         guard let string = self else {

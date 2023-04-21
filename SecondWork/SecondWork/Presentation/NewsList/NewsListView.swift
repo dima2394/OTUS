@@ -8,13 +8,23 @@
 import SwiftUI
 import SwiftUINavigation
 
+enum NewsCategory: String, CaseIterable {
+    case bitcoin
+    case tech
+    case auto
+}
+
 struct NewsListView: View {
 
     @EnvironmentObject
     private var navigationModel: NavigationViewModel
 
-    @State private var selectedCategory: String = NewsCategory.bitcoin.rawValue
-    @StateObject private var viewModel = NewsListViewModel()
+    @State
+    private var selectedCategory: String = NewsCategory.bitcoin.rawValue
+
+    @StateObject
+    private var viewModel = NewsListViewModel()
+    
     private var pickerValues: [String] {
         NewsCategory.allCases.compactMap{$0.rawValue}
     }
@@ -57,11 +67,4 @@ struct NewsListView_Previews: PreviewProvider {
     static var previews: some View {
         NewsListView()
     }
-}
-
-
-enum NewsCategory: String, CaseIterable {
-    case bitcoin
-    case tech
-    case auto
 }

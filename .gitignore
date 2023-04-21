@@ -14,3 +14,7 @@ SwiftUINavigation/.swiftpm/xcode/package.xcworkspace/xcshareddata/IDEWorkspaceCh
 *.xcuserstate
 SecondWork/Core/.swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
 SecondWork/Core/.swiftpm/xcode/xcuserdata/dverennik.xcuserdatad/xcschemes/xcschememanagement.plist
+*.xcworkspacedata
+*.xcworkspacedata
+*.plist
+*.plist

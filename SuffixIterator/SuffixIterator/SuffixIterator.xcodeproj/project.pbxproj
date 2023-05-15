@@ -7,18 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A98C84F29F301FC00530E40 /* JobScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A98C84E29F301FC00530E40 /* JobScheduler.swift */; };
+		6A98C85229F3048300530E40 /* String+SuffixArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A98C85129F3048300530E40 /* String+SuffixArray.swift */; };
 		6AC12A5B29F2F6170082E103 /* SuffixIteratorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC12A5A29F2F6170082E103 /* SuffixIteratorApp.swift */; };
-		6AC12A5D29F2F6170082E103 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC12A5C29F2F6170082E103 /* ContentView.swift */; };
+		6AC12A5D29F2F6170082E103 /* SuffixSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC12A5C29F2F6170082E103 /* SuffixSearchView.swift */; };
 		6AC12A5F29F2F6170082E103 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AC12A5E29F2F6170082E103 /* Assets.xcassets */; };
 		6AC12A6229F2F6170082E103 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AC12A6129F2F6170082E103 /* Preview Assets.xcassets */; };
+		6AC12A6E29F2FB310082E103 /* Suffix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC12A6D29F2FB310082E103 /* Suffix.swift */; };
+		6AC12A7229F2FBF60082E103 /* SuffixSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC12A7129F2FBF60082E103 /* SuffixSearchViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6A98C84E29F301FC00530E40 /* JobScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobScheduler.swift; sourceTree = "<group>"; };
+		6A98C85129F3048300530E40 /* String+SuffixArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+SuffixArray.swift"; sourceTree = "<group>"; };
 		6AC12A5729F2F6170082E103 /* SuffixIterator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuffixIterator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AC12A5A29F2F6170082E103 /* SuffixIteratorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixIteratorApp.swift; sourceTree = "<group>"; };
-		6AC12A5C29F2F6170082E103 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		6AC12A5C29F2F6170082E103 /* SuffixSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixSearchView.swift; sourceTree = "<group>"; };
 		6AC12A5E29F2F6170082E103 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6AC12A6129F2F6170082E103 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6AC12A6D29F2FB310082E103 /* Suffix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Suffix.swift; sourceTree = "<group>"; };
+		6AC12A7129F2FBF60082E103 /* SuffixSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixSearchViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +40,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A98C85029F3046D00530E40 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6A98C85129F3048300530E40 /* String+SuffixArray.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		6AC12A4E29F2F6170082E103 = {
 			isa = PBXGroup;
 			children = (
@@ -52,7 +68,9 @@
 			isa = PBXGroup;
 			children = (
 				6AC12A5A29F2F6170082E103 /* SuffixIteratorApp.swift */,
-				6AC12A5C29F2F6170082E103 /* ContentView.swift */,
+				6AC12A6829F2FAF70082E103 /* Logic */,
+				6AC12A6929F2FAFE0082E103 /* Core */,
+				6AC12A6B29F2FB100082E103 /* Presentation */,
 				6AC12A5E29F2F6170082E103 /* Assets.xcassets */,
 				6AC12A6029F2F6170082E103 /* Preview Content */,
 			);
@@ -65,6 +83,48 @@
 				6AC12A6129F2F6170082E103 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6AC12A6829F2FAF70082E103 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				6AC12A6C29F2FB220082E103 /* Models */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		6AC12A6929F2FAFE0082E103 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				6A98C84E29F301FC00530E40 /* JobScheduler.swift */,
+				6A98C85029F3046D00530E40 /* Extensions */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		6AC12A6B29F2FB100082E103 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				6AC12A7029F2FBE20082E103 /* SearchView */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		6AC12A6C29F2FB220082E103 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6AC12A6D29F2FB310082E103 /* Suffix.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6AC12A7029F2FBE20082E103 /* SearchView */ = {
+			isa = PBXGroup;
+			children = (
+				6AC12A5C29F2F6170082E103 /* SuffixSearchView.swift */,
+				6AC12A7129F2FBF60082E103 /* SuffixSearchViewModel.swift */,
+			);
+			path = SearchView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +197,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6AC12A5D29F2F6170082E103 /* ContentView.swift in Sources */,
+				6AC12A5D29F2F6170082E103 /* SuffixSearchView.swift in Sources */,
+				6A98C84F29F301FC00530E40 /* JobScheduler.swift in Sources */,
+				6AC12A7229F2FBF60082E103 /* SuffixSearchViewModel.swift in Sources */,
+				6A98C85229F3048300530E40 /* String+SuffixArray.swift in Sources */,
 				6AC12A5B29F2F6170082E103 /* SuffixIteratorApp.swift in Sources */,
+				6AC12A6E29F2FB310082E103 /* Suffix.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
